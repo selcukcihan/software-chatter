@@ -34,6 +34,16 @@
   border-radius: var(--border-radius);
 }
 
+.quoted {
+  display: inline;
+  font-style: italic;
+}
+
+.summary {
+  font-size: large;
+  margin-bottom: 50px;
+}
+
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
