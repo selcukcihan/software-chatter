@@ -19,6 +19,7 @@ export default function Home({ tweets }: { tweets: Tweet [] }) {
         <title>Software News Curator</title>
         <meta name="description" content="Daily news from Twitter about software." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="/sw-chatter-img.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=''>
