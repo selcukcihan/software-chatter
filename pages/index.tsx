@@ -22,7 +22,7 @@ export default function Home({ tweets }: { tweets: Tweet [] }) {
         <meta property="og:image" content="/sw-chatter-img.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=''>
+      <main>
         {tweets.map((t, idx) => <TweetComponent key={idx.toString()} tweet={t}/>)}
       </main>
     </>
