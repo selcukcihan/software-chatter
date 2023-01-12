@@ -1,4 +1,5 @@
 import { Tweet } from '../types/tweet'
+import { convert } from 'html-to-text'
 
 const TweetComponent = ({ tweet }: { tweet: Tweet }) => {
   return (
@@ -11,7 +12,7 @@ const TweetComponent = ({ tweet }: { tweet: Tweet }) => {
             </a>
           </div>
         </div>
-        <div className='my-2'>{tweet.text}</div>
+        <div className='my-2'>{convert(tweet.text)}</div>
         <div className='flex mt-2 gap-8 text-xs font-light justify-end'>
           <span>{tweet.likes} likes</span>
         </div>
