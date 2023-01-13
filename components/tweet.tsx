@@ -1,5 +1,16 @@
 import { Tweet } from '../types/tweet'
-import { convert } from 'html-to-text'
+import parse from 'html-react-parser'
+
+const renderLink = (url: string) => `
+  <a target='_blank' rel='noreferrer' className='group' href='${url}'>
+    <span className='opacity-60 group-hover:opacity-100 inline-flex'>${url}</span>
+  </a>
+`
+
+const renderTweet = (tweet: Tweet) => {
+  tweet.urls.map(u => tweet.text = tweet.text.replace(u.shortened, renderLink(u.actual)))
+  return parse(tweet.text)
+}
 
 const TweetComponent = ({ tweet }: { tweet: Tweet }) => {
   return (
@@ -12,7 +23,9 @@ const TweetComponent = ({ tweet }: { tweet: Tweet }) => {
             </a>
           </div>
         </div>
-        <div className='my-2'>{convert(tweet.text)}</div>
+        <div className='my-2'>
+          <p className='break-all'>{renderTweet(tweet)}</p>
+        </div>
         <div className='flex mt-2 gap-8 text-xs font-light justify-end'>
           <span>{tweet.likes} likes</span>
         </div>

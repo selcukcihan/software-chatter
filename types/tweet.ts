@@ -4,6 +4,10 @@ type Tweet = {
   author: string
   likes: number
   index: number
+  urls: {
+    shortened: string
+    actual: string
+  } []
 }
 
 export type { Tweet }

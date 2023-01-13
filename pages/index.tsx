@@ -32,7 +32,9 @@ export default function Home({ tweets }: { tweets: Tweet [] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {tweets.map((t, idx) => <TweetComponent key={idx.toString()} tweet={t}/>)}
+        <div className='container mx-auto'>
+          {tweets.map((t, idx) => <TweetComponent key={idx.toString()} tweet={t}/>)}
+        </div>
       </main>
     </>
   )
