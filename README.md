@@ -1,10 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Overview
+* This is the frontend codebase for a hobby app that presents daily trending tweets.
+* Backend code is in https://github.com/selcukcihan/software-chatter-backend
+* The only integration on the frontend is with a public S3 object that gets updated daily.
+* The app has a single page which is statically rendered at build time.
+
 ## Getting Started
 
 1. `yarn install`
-2. `yarn tailwindcss -i ./styles/input.css -o ./styles/output.css`
-3. `yarn dev`
+2. `yarn dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -30,3 +35,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Check out [http://sw-news.selcukcihan.com](http://sw-news.selcukcihan.com) for the real thing!
