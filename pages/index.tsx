@@ -34,8 +34,14 @@ export default function Home({ tweets, date }: PropType) {
         <title>Software News Curator</title>
         <meta name="description" content="Daily news from Twitter about software." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:url" content="https://sw-news.selcukcihan.com" />
+        <meta property="og:title" content="Software News Curator" />
+        <meta property="og:description" content="Daily news from Twitter about software." />
         <meta property="og:image" content="/sw-chatter-img.png" />
-        <meta property="twitter:image" content={"https://sw-news.selcukcihan.com/sw-chatter-img.png"} />
+        <meta property="twitter:image" content="/sw-chatter-img.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta property="twitter:title" content="Software News Curator" />
+        <meta property="twitter:description" content="Daily news from Twitter about software." />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main className="bg-stone-100">
