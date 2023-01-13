@@ -35,6 +35,7 @@ export default function Home({ tweets, date }: PropType) {
         <meta name="description" content="Daily news from Twitter about software." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content="/sw-chatter-img.png" />
+        <meta property="twitter:image" content={"https://sw-news.selcukcihan.com/sw-chatter-img.png"} />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main className="bg-stone-100">
