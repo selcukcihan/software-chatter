@@ -38,14 +38,14 @@ export default function Home({ tweets, date }: PropType) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main className="bg-stone-100">
-        <header className='sticky top-20 ml-6 p-2 z-10 underline font-mono font-bold text-2xl'>
+        <header className='top-20 mx-auto text-center p-2 z-10 underline font-mono font-bold text-2xl'>
             <a href='#about'>About</a>
         </header>
         <div className='mx-auto text-center text-2xl'>&#128187; Today&apos;s ({new Date(date).toISOString().substring(0, 10)}) tweets on software &#128187;</div>
         <div className='container mx-auto'>
           {tweets.map((t, idx) => <TweetComponent key={idx.toString()} tweet={t}/>)}
         </div>
-        <section id='about' className='p-10 text-xl text-left font-mono'>
+        <section id='about' className='break-all p-10 text-xl text-left font-mono'>
             <div className='text-2xl p-10'>About</div>
             <ul className='list-disc pl-10'>
               <li>The data is fetched from AWS S3 at build time. It contains latest popular tweets on software.</li>
